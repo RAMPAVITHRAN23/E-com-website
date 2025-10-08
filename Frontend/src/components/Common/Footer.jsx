@@ -3,9 +3,10 @@ import { BsInstagram } from 'react-icons/bs'
 import { BsTwitterX } from 'react-icons/bs'
 import { BiLogoGmail } from "react-icons/bi";
 import { TbBrandMeta } from "react-icons/tb";
+import { PiPhoneCall } from "react-icons/pi";
 
 const Footer = () => {
-    return <footer className="border-t py-12">
+    return <footer className="border-t py-12 px-4">
         <div className="container  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6">
             <div >
                 <h3 className="text-lg mb-4 text-gray-800 font-semibold">
@@ -108,8 +109,24 @@ const Footer = () => {
                         <BiLogoGmail />
                     </a>
                 </div>
+                <div>
+                    <p className='mb-2 font-semibold text-gray-800 text-lg'>
+                        Contact Us
+                    </p>
+                    <p className='text-gray-800 text-sm mb-2'>
+                        <PiPhoneCall className='inline mr-2 h-5 w-5 '  />
+                        +91 9876543210
+                    </p>
+                </div>
             </div>
-
+            {/* Footer Bottom */}
+            <div className='text-center col-span-1 sm:col-span-2 md:col-span-4 mt-8 text-gray-600'>
+                {/* Horizontal Line */}
+                <hr className='my-4 border-gray-300' />
+                <p>
+                    &copy; {new Date().getFullYear()} Rabbit. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
 }
